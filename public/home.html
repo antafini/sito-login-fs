@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Benvenuto, <span id="userInfo"></span></h1>
+    </header>
+
+    <main>
+      <p><a href="register.html">Area riservata</a></p>
+       <p><a href="register.html">Documenti Personali</a></p>
+    </main>
+
+    <footer>     
+      <button onclick="logout()">Logout</button>
+    </footer>
+  </div>
+
+  <script>
+    const user = JSON.parse(sessionStorage.getItem("user"));
+    if (!user) location.href = "index.html";
+    document.getElementById("userInfo").innerText = user.nome + " " + user.cognome;
+    function logout() {
+      sessionStorage.removeItem("user");
+      location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

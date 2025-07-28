@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registrati</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2 class="title-gradient">Registrati</h2>
+    </header>
+
+    <main>
+      <form id="registerForm" autocomplete="off">
+        <input placeholder="Nome" id="nome" required />
+        <input placeholder="Cognome" id="cognome" required />
+        <input type="email" placeholder="Email" id="email" required />
+        <input type="password" placeholder="Password" id="password" required />
+        <button type="submit">Registrati</button>
+      </form>
+      <!-- Sotto il form -->
+      <div id="message" class="message"></div>
+    </main>
+
+    <footer>
+      <p>Hai già un account? <a href="index.html">Accedi</a></p>
+    </footer>
+  </div>
+
+  <div id="popup" class="popup" style="display:none;">
+    <div class="popup-content">
+      <span id="popup-message"></span>
+      <br>
+      <button id="popup-ok" style="margin-top:1.5rem; padding:0.5rem 2rem; border-radius:8px; border:none; background:#667eea; color:#fff; font-size:1rem; font-weight:bold; cursor:pointer;">OK</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
